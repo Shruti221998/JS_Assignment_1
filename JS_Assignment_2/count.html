@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to count positive, negative, and zero numbers
+function countNumbers(arr) {
+  let positiveCount = 0;
+  let negativeCount = 0;
+  let zeroCount = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      positiveCount++;
+    } else if (arr[i] < 0) {
+      negativeCount++;
+    } else {
+      zeroCount++;
+    }
+  }
+
+  document.write(`Count of positive numbers: ${positiveCount} <br>`);
+  document.write(`Count of negative numbers: ${negativeCount} <br>`);
+  document.write(`Count of zeros: ${zeroCount} <br>`);
+}
+
+// Get 10 inputs from the user
+const userInputs = [];
+for (let i = 1; i <= 10; i++) {
+  const userInput = parseInt(prompt(`Enter number ${i}:`));
+  userInputs.push(userInput);
+}
+
+// Check if the input is a valid number
+const validInputs = userInputs.filter((input) => !isNaN(input));
+
+// Call the function to count numbers
+countNumbers(validInputs);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to print the star pattern
+        function printStarPattern(rows) {
+        let i = 1;
+
+        while (i <= rows) {
+            let j = 1;
+
+            while (j <= i) {
+            process.stdout.write('* ');
+            j++;
+            }
+
+            process.stdout.write('\n');
+            i++;
+        }
+        }
+
+        // Number of rows in the pattern
+        const numRows = 5;
+
+        // Call the function to print the pattern
+        printStarPattern(numRows);
+
+    </script>
+</body>
+</html>
